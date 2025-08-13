@@ -37,16 +37,16 @@ class Main extends Component {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="btn btn-danger btn-block btn-lg">STAKE!</button>
+              <button type="submit" className="btn btn-primary btn-block btn-lg">STAKE TOKENS</button>
             </form>
             <button
               type="submit"
-              className="btn btn-link btn-block btn-sm"
+              className="btn btn-outline-secondary btn-block btn-sm"
               onClick={(event) => {
                 event.preventDefault()
                 this.props.unstakeTokens()
               }}>
-                UN-STAKE...
+                UNSTAKE TOKENS
               </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ class Main extends Component {
           <tbody>
             <tr>
               <td>{window.web3.utils.fromWei(this.props.stakingBalance, 'Ether')} mDAI</td>
-              <td>{window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} DAPP</td>
+              <td>{window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} HRT</td>
             </tr>
           </tbody>
         </table>
